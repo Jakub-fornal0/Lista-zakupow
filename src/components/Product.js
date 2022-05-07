@@ -33,7 +33,9 @@ const Product = ({ product, onDelete }) => {
           )}
           <p className={isChecked ? "checked" : ""}>{product.name}</p>
         </div>
-        <p>{product.quantity}</p>
+        <p>
+          {product.quantity} {product.unit}
+        </p>
       </div>
       <div className="delete-icons">
         <FiX onClick={() => onDelete(product.id)}></FiX>

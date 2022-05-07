@@ -11,18 +11,21 @@ function App() {
       name: "mleko",
       category: "diary",
       quantity: 1,
+      unit: "l",
     },
     {
       id: 2,
       name: "chleb",
       category: "bread",
       quantity: 1,
+      unit: "szt",
     },
     {
       id: 3,
       name: "jabłka",
       category: "fruits&vagetables",
       quantity: 2,
+      unit: "kg",
     },
   ]);
 
