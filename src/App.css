@@ -42,13 +42,23 @@ body {
 }
 
 .product-info .input-name input {
-  margin-top: 28%;
+  display: flex;
+  justify-content: flex-end;
+  align-self: center;
+  margin-right: 30px;
 }
 
 .product-info .input-name p {
   margin-left: 10px;
 }
+
 .product-icons {
+  display: flex;
+  justify-content: flex-end;
+  align-self: center;
+}
+
+.delete-icons {
   display: flex;
   justify-content: flex-end;
   align-self: center;

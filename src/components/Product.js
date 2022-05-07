@@ -1,5 +1,11 @@
 import { useState } from "react";
 import { FiX } from "react-icons/fi";
+import {
+  GiMilkCarton,
+  GiSlicedBread,
+  GiShinyApple,
+  GiHamShank,
+} from "react-icons/gi";
 
 const Product = ({ product, onDelete }) => {
   const [isChecked, setIsChecked] = useState(false);
@@ -13,11 +19,23 @@ const Product = ({ product, onDelete }) => {
             onChange={(e) => setIsChecked(!isChecked)}
             required
           />
+          {product.category === "diary" && (
+            <GiMilkCarton className="product-icons"></GiMilkCarton>
+          )}
+          {product.category === "fruits&vagetables" && (
+            <GiShinyApple className="product-icons"></GiShinyApple>
+          )}
+          {product.category === "bread" && (
+            <GiSlicedBread className="product-icons"></GiSlicedBread>
+          )}
+          {product.category === "meat" && (
+            <GiHamShank className="product-icons"></GiHamShank>
+          )}
           <p className={isChecked ? "checked" : ""}>{product.name}</p>
         </div>
         <p>{product.quantity}</p>
       </div>
-      <div className="product-icons">
+      <div className="delete-icons">
         <FiX onClick={() => onDelete(product.id)}></FiX>
       </div>
     </div>

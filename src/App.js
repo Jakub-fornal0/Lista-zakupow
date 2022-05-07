@@ -21,7 +21,7 @@ function App() {
     {
       id: 3,
       name: "jabłka",
-      category: "fruit&vagetables",
+      category: "fruits&vagetables",
       quantity: 2,
     },
   ]);

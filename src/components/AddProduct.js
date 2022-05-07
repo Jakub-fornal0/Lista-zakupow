@@ -31,6 +31,7 @@ const AddProduct = ({ onAdd }) => {
           <option value="fruits&vagetables">Owoce i warzywa</option>
           <option value="dairy">Nabiał</option>
           <option value="bread">Pieczywo</option>
+          <option value="meat">Mięso</option>
         </select>
       </div>
       <div className="input-div">
