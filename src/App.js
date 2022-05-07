@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import Products from "./components/Products";
+import AddProduct from "./components/AddProduct";
 import "./App.css";
 
 function App() {
@@ -29,9 +30,16 @@ function App() {
     setProducts(products.filter((product) => product.id !== id));
   };
 
+  const addProduct = (product) => {
+    const id = products.length + 1;
+    const newProduct = { id, ...product };
+    setProducts([...products, newProduct]);
+  };
+
   return (
     <div className="App">
       <Header title="Lista zakupów" />
+      <AddProduct onAdd={addProduct} />
       {products.length > 0 ? (
         <Products products={products} onDelete={deleteProduct} />
       ) : (
